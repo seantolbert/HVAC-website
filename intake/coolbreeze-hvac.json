@@ -1,0 +1,38 @@
+{
+  "slug": "coolbreeze-hvac",
+  "sample": true,
+  "source": "Fictional business written for a portfolio piece. No Google listing, reviews, or photos exist.",
+  "name": "CoolBreeze HVAC",
+  "trade": "HVAC",
+  "phone": "(602) 555-0134",
+  "phone_note": "555-01xx is reserved for fiction.",
+  "area": {
+    "base": "Phoenix, AZ",
+    "radius_miles": 30,
+    "towns": ["Phoenix", "Tempe", "Mesa", "Chandler", "Gilbert", "Scottsdale", "Glendale", "Peoria"]
+  },
+  "hours": {
+    "office": "Mon-Sat 7am-6pm",
+    "on_call": "Every day 7am-midnight"
+  },
+  "services": [
+    "AC repair and replacement",
+    "Heat pumps",
+    "Furnaces and heating",
+    "Ductwork and air quality",
+    "Maintenance plan"
+  ],
+  "reviews": [],
+  "reviews_note": "None. The business is fictional, so trust content is pricing, process, and the guarantee instead.",
+  "logo": {
+    "file": "src/components/site/logo.tsx",
+    "primary_color": "#FF5B1F",
+    "rights_status": "original-svg"
+  },
+  "images": [
+    { "id": "condenser-cutaway", "file": "src/components/site/illustrations/condenser.tsx", "rights_status": "original-svg" },
+    { "id": "heat-pump-cutaway", "file": "src/components/site/illustrations/heat-pump.tsx", "rights_status": "original-svg" },
+    { "id": "furnace-cutaway", "file": "src/components/site/illustrations/furnace.tsx", "rights_status": "original-svg" },
+    { "id": "ductwork-cutaway", "file": "src/components/site/illustrations/ductwork.tsx", "rights_status": "original-svg" }
+  ]
+}

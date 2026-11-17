@@ -1,0 +1,442 @@
+{
+  "sample": true,
+  "demoNote": "Portfolio demo. CoolBreeze HVAC is a fictional company; the phone number, prices, and license are sample values.",
+  "name": "CoolBreeze HVAC",
+  "shortName": "CoolBreeze",
+  "summary": "Heating and air conditioning repair, replacement, and maintenance across the Phoenix metro. Phones answered until midnight, every price in writing before work starts.",
+  "phone": "(602) 555-0134",
+  "phoneE164": "+16025550134",
+  "email": "service@coolbreeze.example",
+  "address": "Phoenix, AZ",
+  "license": "ROC #000000 (sample)",
+  "timezone": "America/Phoenix",
+  "hours": {
+    "office": {
+      "label": "Office",
+      "days": "Mon–Sat",
+      "time": "7am–6pm",
+      "weekdays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": 7,
+      "close": 18
+    },
+    "onCall": {
+      "label": "Techs on call",
+      "days": "Every day",
+      "time": "7am–midnight",
+      "open": 7,
+      "close": 24
+    }
+  },
+  "serviceArea": {
+    "base": "central Phoenix",
+    "radiusMiles": 30,
+    "towns": [
+      "Phoenix",
+      "Tempe",
+      "Mesa",
+      "Chandler",
+      "Gilbert",
+      "Scottsdale",
+      "Glendale",
+      "Peoria"
+    ]
+  },
+  "hero": {
+    "indoorTemp": 78,
+    "defaultSetpoint": 72,
+    "min": 60,
+    "max": 90,
+    "cool": {
+      "eyebrow": "Cooling · Phoenix metro",
+      "headline": "It’s 114° out. Your AC quit at 2pm.",
+      "body": "Call before midnight and a person answers. You get a two-hour arrival window, and the price in writing before anyone opens a panel."
+    },
+    "heat": {
+      "eyebrow": "Heating · Phoenix metro",
+      "headline": "It’s 36° at 6am. The furnace won’t light.",
+      "body": "Furnaces here sit idle most of the year, so they fail on the first cold morning. We pick up at 7am and price it in writing first."
+    },
+    "hold": {
+      "eyebrow": "Holding · Phoenix metro",
+      "headline": "It’s 78° inside. Let’s keep it there.",
+      "body": "Two tune-ups a year catch the parts that fail on the hottest and coldest days. Drag the dial to see both."
+    },
+    "dialHint": "Drag the dial, or use the arrow keys",
+    "facts": [
+      "Phones answered until midnight",
+      "Two-hour arrival windows",
+      "Price in writing before work starts"
+    ],
+    "secondary": "or get a written quote"
+  },
+  "services": [
+    {
+      "slug": "ac",
+      "name": "AC repair & replacement",
+      "illustration": "condenser",
+      "summary": "Most summer breakdowns come down to a handful of parts. We find the one that failed, show it to you, and price the fix in writing. If replacing makes more sense, we show you the math.",
+      "checks": [
+        "Capacitor and contactor in the electrical panel",
+        "Condenser coil, for dirt and bent fins",
+        "Fan motor and blade",
+        "Refrigerant pressure at the service valves"
+      ],
+      "prices": [
+        {
+          "label": "Repair",
+          "from": 149
+        },
+        {
+          "label": "New system",
+          "from": 7400
+        }
+      ],
+      "quoteLabel": "Get a written quote for AC work"
+    },
+    {
+      "slug": "heat-pump",
+      "name": "Heat pumps",
+      "illustration": "heat-pump",
+      "summary": "One outdoor unit that cools in July and heats in January by running the refrigerant in reverse. A good fit for Phoenix winters, which rarely freeze.",
+      "checks": [
+        "Reversing valve, which switches heating and cooling",
+        "Outdoor coil and defrost cycle",
+        "Line set insulation between the units",
+        "Indoor air handler and condensate drain"
+      ],
+      "prices": [
+        {
+          "label": "Repair",
+          "from": 149
+        },
+        {
+          "label": "New system",
+          "from": 8900
+        }
+      ],
+      "quoteLabel": "Get a written quote for a heat pump"
+    },
+    {
+      "slug": "furnace",
+      "name": "Furnaces & heating",
+      "illustration": "furnace",
+      "summary": "A gas furnace in Phoenix sits idle eight months a year, so the flame sensor and igniter tend to fail on the first cold morning. We clean, test, and check the heat exchanger for cracks.",
+      "checks": [
+        "Burners and flame sensor",
+        "Heat exchanger, for cracks",
+        "Blower wheel and motor",
+        "Filter and airflow"
+      ],
+      "prices": [
+        {
+          "label": "Repair",
+          "from": 129
+        },
+        {
+          "label": "Heating check",
+          "from": 119
+        }
+      ],
+      "quoteLabel": "Get a written quote for furnace work"
+    },
+    {
+      "slug": "ducts",
+      "name": "Ductwork & air quality",
+      "illustration": "ductwork",
+      "summary": "Phoenix ducts run through attics that get far hotter than the air outside. Leaky joints up there pull dusty, hot attic air into the house. We test the system, seal it, and add insulation where it’s thin.",
+      "checks": [
+        "Leaks at joints and boots",
+        "Duct insulation in the attic",
+        "Return air size",
+        "Supply registers and room-to-room balance"
+      ],
+      "prices": [
+        {
+          "label": "Duct sealing",
+          "from": 650
+        },
+        {
+          "label": "Duct test",
+          "from": 189
+        }
+      ],
+      "quoteLabel": "Get a written quote for duct work"
+    }
+  ],
+  "triage": {
+    "intro": "Pick what your system is doing. You’ll see the usual causes, what’s safe to check yourself, and what a fix typically costs.",
+    "urgencyLabels": {
+      "today": "Call today",
+      "soon": "Book within a day or two",
+      "later": "Book a visit this month"
+    },
+    "symptoms": [
+      {
+        "id": "warm-air",
+        "label": "Blowing warm air",
+        "urgency": "today",
+        "urgencyNote": "When it’s over 100° outside, a house without cooling gets dangerous within hours, especially for older people, babies, and pets.",
+        "causes": [
+          "Failed capacitor, the most common summer repair",
+          "Clogged filter starving the indoor coil of air",
+          "Tripped breaker or blown fuse at the outdoor disconnect",
+          "Low refrigerant from a leak"
+        ],
+        "tryFirst": [
+          "Set the thermostat to COOL, and below the room temperature",
+          "Check the breaker labeled AC or condenser",
+          "Pull the filter. If you can’t see light through it, replace it"
+        ],
+        "cost": [
+          150,
+          650
+        ]
+      },
+      {
+        "id": "short-cycling",
+        "label": "Turns on and off every few minutes",
+        "urgency": "soon",
+        "urgencyNote": "Short cycling wears out the compressor, which is the most expensive part of the system.",
+        "causes": [
+          "Dirty condenser coil overheating the system",
+          "Thermostat in direct sun or right next to a vent",
+          "Low refrigerant",
+          "A system too large for the house"
+        ],
+        "tryFirst": [
+          "Replace the filter",
+          "Check whether sun hits the thermostat in the afternoon"
+        ],
+        "cost": [
+          150,
+          900
+        ]
+      },
+      {
+        "id": "ice",
+        "label": "Ice on the copper lines",
+        "urgency": "soon",
+        "urgencyNote": "Running a frozen system can push liquid refrigerant into the compressor. Thaw it first.",
+        "causes": [
+          "Restricted airflow from a clogged filter or closed vents",
+          "Low refrigerant",
+          "A failing blower motor"
+        ],
+        "tryFirst": [
+          "Set the system to OFF and the fan to ON for 2–4 hours to thaw",
+          "Replace the filter and open any closed vents",
+          "Don’t chip at the ice. The coil fins bend easily"
+        ],
+        "cost": [
+          150,
+          1200
+        ]
+      },
+      {
+        "id": "noise",
+        "label": "Making a new noise",
+        "urgency": "soon",
+        "urgencyNote": "A grinding or banging noise means turn it off now. A buzz or hum can usually wait a day.",
+        "causes": [
+          "Buzzing: a capacitor or contactor on its way out",
+          "Squealing: blower motor bearings",
+          "Banging or grinding: a loose or broken part inside"
+        ],
+        "tryFirst": [
+          "Turn the system off if it grinds or bangs",
+          "Note whether it happens at startup, while running, or at shutdown"
+        ],
+        "cost": [
+          150,
+          800
+        ]
+      },
+      {
+        "id": "high-bill",
+        "label": "Bill went up, house isn’t cooler",
+        "urgency": "later",
+        "urgencyNote": "This isn’t an emergency, but every month you wait shows up on the next bill.",
+        "causes": [
+          "Leaky ducts in the attic",
+          "Dirty outdoor coil",
+          "An aging system losing efficiency",
+          "A thermostat schedule working against you"
+        ],
+        "tryFirst": [
+          "With the power off, rinse the outdoor coil gently with a hose",
+          "Replace the filter",
+          "Check the thermostat schedule"
+        ],
+        "cost": [
+          119,
+          1500
+        ]
+      },
+      {
+        "id": "no-power",
+        "label": "Won’t turn on at all",
+        "urgency": "today",
+        "urgencyNote": "Most no-power calls turn out to be a cheap fix, but in summer it still means today.",
+        "causes": [
+          "Dead thermostat batteries",
+          "Tripped breaker",
+          "Float switch shut the system off because the condensate drain is clogged",
+          "Blown low-voltage fuse on the control board"
+        ],
+        "tryFirst": [
+          "Replace the thermostat batteries",
+          "Check the breakers for the air handler and the outdoor unit",
+          "Look for standing water in the drain pan under the indoor unit"
+        ],
+        "cost": [
+          89,
+          450
+        ]
+      }
+    ]
+  },
+  "repairOrReplace": {
+    "threshold": 5000,
+    "intro": "A rule of thumb many technicians use: multiply the system’s age by the repair quote. If the result is over $5,000, get a replacement quote before you pay for the repair.",
+    "repairVerdict": "Repair it.",
+    "repairBody": "The math favors fixing what you have. Ask for the old part back so you can see what failed.",
+    "replaceVerdict": "Get a replacement quote too.",
+    "replaceBody": "Repair money starts going into a system near the end of its life. Compare a written replacement price before you decide.",
+    "r22Age": 15,
+    "r22Note": "Systems installed before about 2010 usually run on R-22 refrigerant. It hasn’t been made since 2020, so recharging one gets more expensive every year.",
+    "disclaimer": "This is a rule of thumb, not a quote. We’ll give you both prices in writing."
+  },
+  "priceSheet": {
+    "title": "The price sheet",
+    "intro": "These are the prices we start from. Your exact price comes in writing after the diagnosis, before any work starts.",
+    "rows": [
+      {
+        "label": "Diagnostic visit",
+        "amount": 89,
+        "note": "Credited toward the repair if you go ahead"
+      },
+      {
+        "label": "After-hours diagnostic",
+        "amount": 149,
+        "note": "6pm to midnight, every day"
+      },
+      {
+        "label": "Tune-up, cooling or heating",
+        "amount": 119,
+        "note": "Per visit"
+      },
+      {
+        "label": "AC or heat pump repair",
+        "amount": 149,
+        "from": true,
+        "note": "Parts and labor"
+      },
+      {
+        "label": "Furnace repair",
+        "amount": 129,
+        "from": true,
+        "note": "Parts and labor"
+      },
+      {
+        "label": "Duct sealing",
+        "amount": 650,
+        "from": true,
+        "note": "Most single-story homes"
+      },
+      {
+        "label": "New AC system",
+        "amount": 7400,
+        "from": true,
+        "note": "Installed, with permit"
+      },
+      {
+        "label": "New heat pump system",
+        "amount": 8900,
+        "from": true,
+        "note": "Installed, with permit"
+      }
+    ],
+    "promises": [
+      {
+        "title": "The written price is the price.",
+        "body": "If the job takes longer than we said, that’s on us. The number on the paper doesn’t change."
+      },
+      {
+        "title": "A repeat failure is on us.",
+        "body": "If a part we replaced fails again within a year, we come back and replace it at no charge."
+      },
+      {
+        "title": "You keep the old part.",
+        "body": "Ask, and we’ll hand you whatever we took out, so you can see what failed."
+      }
+    ]
+  },
+  "visit": {
+    "title": "What happens after you call",
+    "steps": [
+      {
+        "title": "A person answers",
+        "body": "Someone who can book you, until midnight. Not a voicemail tree."
+      },
+      {
+        "title": "A two-hour window",
+        "body": "You get a text with your arrival window, then another when the tech is on the way."
+      },
+      {
+        "title": "Diagnosis",
+        "body": "The tech finds the cause and shows you, with photos if it’s up in the attic."
+      },
+      {
+        "title": "Price in writing",
+        "body": "You see the exact price before any work starts. Saying no costs only the diagnostic fee."
+      },
+      {
+        "title": "Fix and follow-up",
+        "body": "Work done, area cleaned up, and a call two days later to check the house is holding temperature."
+      }
+    ]
+  },
+  "plan": {
+    "name": "Two-season plan",
+    "price": 16,
+    "period": "month",
+    "intro": "Two visits a year, timed for Phoenix: one before the heat and one before the cold.",
+    "seasons": [
+      {
+        "mode": "cool",
+        "when": "March–April",
+        "title": "Cooling tune-up",
+        "body": "Before the first 100° day: capacitor test, coil rinse, refrigerant check, drain flush."
+      },
+      {
+        "mode": "heat",
+        "when": "October–November",
+        "title": "Heating check",
+        "body": "Before the first cold morning: flame sensor clean, heat exchanger check, carbon monoxide test."
+      }
+    ],
+    "perks": [
+      "Booked ahead of non-members on the hottest days",
+      "No after-hours fee",
+      "15% off repairs"
+    ]
+  },
+  "quote": {
+    "title": "Get a written quote",
+    "body": "Tell us what’s going on. On a real site, a dispatcher would text you back with an arrival window.",
+    "times": [
+      "Morning",
+      "Afternoon",
+      "Evening"
+    ],
+    "success": "Request received. This is a demo site, so nothing was sent.",
+    "demoNote": "Demo form: nothing you type here leaves your browser."
+  }
+}

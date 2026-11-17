@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* The thermostat drives --warmth from 0 (cooling) to 1 (heating). Registering
+   it lets the page surface ease between the two neutrals. */
+@property --warmth {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+:root {
+  --warmth: 0;
+  --surface: color-mix(in oklab, var(--paper) calc(var(--warmth) * 100%), var(--paper-cool));
+  transition: --warmth 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    transition: none;
+  }
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-cool: var(--paper-cool);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-muted: var(--muted-ink);
+  --color-seam: var(--seam);
+  --color-ink-muted: var(--ink-muted);
+  --font-heading: var(--heading-family);
+  --font-sans: var(--body-family);
+}
+
+@utility rounded-brand {
+  border-radius: var(--radius);
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+html {
+  background: var(--ink);
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--body-family), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-family), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.on-ink :focus-visible {
+  outline-color: var(--paper);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}

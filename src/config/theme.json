@@ -1,0 +1,17 @@
+{
+  "colors": {
+    "ink": "#15171A",
+    "paper": "#F4F1EC",
+    "paperCool": "#E8EEF1",
+    "accent": "#FF5B1F",
+    "accentInk": "#15171A",
+    "muted": "#565A62",
+    "seam": "#D3CCC0",
+    "inkMuted": "#A9ADB4"
+  },
+  "fonts": {
+    "heading": "Manrope",
+    "body": "Inter"
+  },
+  "radius": "0.25rem"
+}

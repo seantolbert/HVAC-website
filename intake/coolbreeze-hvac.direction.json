@@ -1,0 +1,27 @@
+{
+  "trade": "HVAC",
+  "sample": true,
+  "palette": {
+    "ink": { "hex": "#15171A", "role": "graphite base: text, dark bands, drawing strokes" },
+    "paper": { "hex": "#F4F1EC", "role": "warm neutral surface (heating side of the thermostat)" },
+    "paperCool": { "hex": "#E8EEF1", "role": "cool neutral surface the page shifts toward in cooling mode; a surface, not an accent" },
+    "accent": { "hex": "#FF5B1F", "role": "logo color, signal orange: airflow line, primary button field, dial setpoint. Never body text on paper." },
+    "accentInk": { "hex": "#15171A", "role": "text on accent" },
+    "muted": { "hex": "#565A62", "role": "secondary text on paper and paperCool" },
+    "seam": { "hex": "#D3CCC0", "role": "rules, panel seams, drawing fills (non-text)" },
+    "inkMuted": { "hex": "#A9ADB4", "role": "secondary text on ink" }
+  },
+  "contrast_checks": "Run scripts/contrast.mjs; every text pair must reach 4.5:1.",
+  "type": { "heading": "Manrope", "body": "Inter" },
+  "motion": {
+    "concept": "Airflow path",
+    "description": "A thin signal-orange duct line leaves the bottom of the thermostat, elbows into the services gutter, and branches into each service row. On desktop with motion allowed, GSAP ScrollTrigger scrubs its stroke as the visitor scrolls; Lenis provides smooth scroll.",
+    "fallback": "Below 768px or with prefers-reduced-motion: the line is drawn complete, no scroll-linked motion, no smooth scroll.",
+    "interaction_note": "The hero thermostat is a direct-manipulation control, not ambient motion. Dragging it shifts the page surface between paper and paperCool and swaps the hero copy between cooling and heating."
+  },
+  "copy_voice": "Plain and direct. Response time, arrival windows, and written pricing up front. Name the part (capacitor, flame sensor) and say what it does. Phoenix-specific: heat, attics, idle furnaces.",
+  "hero_image": null,
+  "open_questions": [
+    "The business is fictional: phone, prices, license number, and hours are sample values and the site is marked as a portfolio demo and noindexed."
+  ]
+}
